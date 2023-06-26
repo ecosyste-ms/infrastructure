@@ -1,3 +1,5 @@
+# Services
+
 | Service           | IP             | Requirements |
 |-------------------|----------------|--------------|
 | repos             | 195.154.87.126 | very high    |
@@ -18,3 +20,16 @@
 | digest            | 195.154.82.7   | low          |
 | diff              | 195.154.82.7   | low          |
 | licenses          | 195.154.82.7   | low          |
+
+# Servers
+
+| Server         | Number of Services | Size       |
+|----------------|--------------------|------------|
+| 195.154.87.126 | 1 (repos)          | Very Large |
+| 51.15.160.73   | 1 (timeline)       | Very Large |
+| 195.154.29.88  | 1 (packages)       | Large      |
+| 51.159.31.55   | 1 (parser)         | Medium     |
+| 62.210.127.225 | 3                  | Medium     |
+| 195.154.82.7   | 11                 | Large      |
+| 195.154.29.100 | 0                  | Large      |
+| 51.15.23.142   | 0                  | Very Large |
