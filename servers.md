@@ -30,6 +30,13 @@
 | 195.154.29.88  | 1 (packages)       | Large      |
 | 51.159.31.55   | 1 (parser)         | Medium     |
 | 62.210.127.225 | 3                  | Medium     |
+| 62.210.217.62  | 1 (docker)         | Small      |
 | 195.154.82.7   | 11                 | Large      |
-| 195.154.29.100 | 0                  | Large      |
-| 51.15.23.142   | 0                  | Very Large |
+| 195.154.29.100 | 0  (prev pkgs)     | Large      |
+| 51.15.23.142   | 0  (prev repos)    | Very Large |
+
+## Planned changes
+
+packages to move to: 51.15.23.142
+docker, commits and issues to move to: 195.154.29.100
+turn off:  62.210.127.225, 62.210.217.62
