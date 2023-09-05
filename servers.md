@@ -4,7 +4,8 @@
 |-------------------|----------------|--------------|
 | repos             | 195.154.87.126 | very high    |
 | timeline          | 51.15.160.73   | very high    |
-| packages          | 195.154.29.88  | high         |
+| packages db       | 195.154.29.88  | high         |
+| packages web      | 51.15.23.142   | high         |
 | parser            | 51.159.31.55   | high         |
 | commits           | 62.210.127.225 | medium       |
 | docker            | 62.210.217.62  | medium       |
@@ -27,16 +28,16 @@
 |----------------|--------------------|------------|
 | 195.154.87.126 | 1 (repos)          | Very Large |
 | 51.15.160.73   | 1 (timeline)       | Very Large |
-| 195.154.29.88  | 1 (packages)       | Large      |
+| 51.15.23.142   | 1  (packages web)  | Large      |
+| 195.154.29.88  | 1 (packages db)    | Large      |
 | 51.159.31.55   | 1 (parser)         | Medium     |
-| 62.210.127.225 | 3                  | Medium     |
+| 62.210.127.225 | 2 (commits,issues) | Medium     |
 | 62.210.217.62  | 1 (docker)         | Small      |
 | 195.154.82.7   | 11                 | Large      |
 | 195.154.29.100 | 0  (prev pkgs)     | Large      |
-| 51.15.23.142   | 0  (prev repos)    | Very Large |
+
 
 ## Planned changes
 
-packages to move to: 51.15.23.142
 docker, commits and issues to move to: 195.154.29.100
 turn off:  62.210.127.225, 62.210.217.62
