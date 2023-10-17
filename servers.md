@@ -28,16 +28,14 @@
 |----------------|--------------------|------------|
 | 195.154.87.126 | 1 (repos)          | Very Large |
 | 51.15.160.73   | 1 (timeline)       | Very Large |
-| 51.15.23.142   | 1  (packages web)  | Large      |
+| 51.15.23.142   | 1 (packages web)   | Large      |
 | 195.154.29.88  | 1 (packages db)    | Large      |
+| 195.154.29.100 | 1 (commits)        | Large      |
 | 51.159.31.55   | 1 (parser)         | Medium     |
-| 62.210.127.225 | 2 (commits,issues) | Medium     |
+| 62.210.127.225 | 1 (issues)         | Medium     |
 | 62.210.217.62  | 1 (docker)         | Small      |
 | 195.154.82.7   | 11                 | Large      |
-| 195.154.29.100 | 0  (prev pkgs)     | Large      |
-
 
 ## Planned changes
 
-docker, commits and issues to move to: 195.154.29.100
-turn off:  62.210.127.225, 62.210.217.62
+new large server for parser
