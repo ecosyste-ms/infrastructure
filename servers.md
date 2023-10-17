@@ -6,7 +6,7 @@
 | timeline          | 51.15.160.73   | very high    |
 | packages db       | 195.154.29.88  | high         |
 | packages web      | 51.15.23.142   | high         |
-| parser            | 51.159.31.55   | high         |
+| parser            | 195.154.86.89  | high         |
 | commits           | 62.210.127.225 | medium       |
 | docker            | 62.210.217.62  | medium       |
 | issues            | 62.210.127.225 | medium       |
@@ -31,11 +31,9 @@
 | 51.15.23.142   | 1 (packages web)   | Large      |
 | 195.154.29.88  | 1 (packages db)    | Large      |
 | 195.154.29.100 | 1 (commits)        | Large      |
-| 51.159.31.55   | 1 (parser)         | Medium     |
+| 195.154.86.89  | 1 (parser)         | Large      |
 | 62.210.127.225 | 1 (issues)         | Medium     |
 | 62.210.217.62  | 1 (docker)         | Small      |
 | 195.154.82.7   | 11                 | Large      |
+| 51.159.31.55   | spare              | Medium     |
 
-## Planned changes
-
-new large server for parser (195.154.86.89)
