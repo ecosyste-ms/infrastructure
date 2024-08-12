@@ -10,13 +10,13 @@
 | commits           | 62.210.127.225 | medium       |
 | docker            | 62.210.217.62  | medium       |
 | issues            | 62.210.127.225 | medium       |
+| archives          | 51.159.31.55   | medium          |
 | home              | 195.154.82.7   | low          |
 | resolve           | 195.154.82.7   | low          |
 | advisories        | 195.154.82.7   | low          |
 | summary           | 195.154.82.7   | low          |
 | conda-api         | 195.154.82.7   | low          |
 | npm-update-stream | 195.154.82.7   | low          |
-| archives          | 195.154.82.7   | low          |
 | blog              | 195.154.82.7   | low          |
 | digest            | 195.154.82.7   | low          |
 | diff              | 195.154.82.7   | low          |
@@ -35,5 +35,4 @@
 | 62.210.127.225 | 1 (issues)         | Medium     |
 | 62.210.217.62  | 1 (docker)         | Small      |
 | 195.154.82.7   | 11                 | Large      |
-| 51.159.31.55   | spare              | Medium     |
-
+| 51.159.31.55   | 1 (archives)       | Medium     |
