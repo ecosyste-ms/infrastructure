@@ -44,6 +44,6 @@
 | 195.154.81.95  | 1 (parser)         | Large      | Ubuntu 20.04.6 LTS |
 | 51.159.56.73   | 1 (issues)         | Large      | Ubuntu 24.04.2 LTS |
 | 62.210.127.225 | 1 (dependabot)     | Medium     | Ubuntu 22.04.5 LTS |
-| 62.210.217.62  | 1 (docker)         | Small      | Ubuntu 20.04.6 LTS |
+| 62.210.217.62  | 1 (docker)         | Small      | Ubuntu 22.04.6 LTS |
 | 195.154.82.7   | 18                 | Large      | Ubuntu 20.04.6 LTS |
-| 51.159.31.55   | 1 (archives)       | Medium     | Ubuntu 20.04.6 LTS |
+| 51.159.31.55   | 1 (archives)       | Medium     | Ubuntu 22.04.5 LTS |
