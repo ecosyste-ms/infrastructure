@@ -8,7 +8,7 @@ Analysis of AppSignal applications with server IPs and performance insights over
 | Service | GitHub | IP Address | Server Size | Requests (30d) | Background Jobs (30d) | Open Incidents | Error Count | Avg Duration | Performance Status |
 |---------|--------|------------|-------------|----------------|----------------------|----------------|-------------|--------------|-------------------|
 | [repos](https://repos.ecosyste.ms) | [repos](https://github.com/ecosyste-ms/repos) | 195.154.87.126 | Very Large | 86.4M | 132.4M | 44 | 3590 | 3571s | 🔴 Highest volume, 31.00% uptime |
-| [packages web](https://packages.ecosyste.ms) | [packages](https://github.com/ecosyste-ms/packages) | 51.15.23.142 | Large | 167.1M | 58.8M | 49 | 1832 | 1987s | 🔴 Most traffic, 68.09% uptime, 4.97% error rate |
+| [packages](https://packages.ecosyste.ms) | [packages](https://github.com/ecosyste-ms/packages) | 51.15.23.142 | Large | 167.1M | 58.8M | 49 | 1832 | 1987s | 🔴 Most traffic, 68.09% uptime, 4.97% error rate |
 | [commits](https://commits.ecosyste.ms) | [commits](https://github.com/ecosyste-ms/commits) | 195.154.29.100 | Large | 7.5M | 1.3M | 0 | 15 | 1396s | 🔴 Moderate traffic, 89.57% uptime |
 | [docker](https://docker.ecosyste.ms) | [docker](https://github.com/ecosyste-ms/docker) | 62.210.217.62 | Medium | 3.4M | 0.2M | 1 | 181 | 520s | 🔴 Moderate traffic, 89.57% uptime |
 | [timeline](https://timeline.ecosyste.ms) | [timeline](https://github.com/ecosyste-ms/timeline) | 51.15.160.73 | Very Large | 0.7M | - | 8 | 6 | 419s | ✅ 99.39% uptime (217% error rate anomaly) |
