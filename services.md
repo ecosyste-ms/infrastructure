@@ -11,10 +11,10 @@ Analysis of AppSignal applications with server IPs and performance insights over
 | [packages](https://packages.ecosyste.ms) | [packages](https://github.com/ecosyste-ms/packages) | 51.15.23.142 | Large | 167.1M | 58.8M | 49 | 1832 | 1987s | 🔴 Most traffic, 68.09% uptime, 4.97% error rate |
 | [commits](https://commits.ecosyste.ms) | [commits](https://github.com/ecosyste-ms/commits) | 195.154.29.100 | Large | 7.5M | 1.3M | 0 | 15 | 1396s | 🔴 Moderate traffic, 89.57% uptime |
 | [docker](https://docker.ecosyste.ms) | [docker](https://github.com/ecosyste-ms/docker) | 62.210.217.62 | Medium | 3.4M | 0.2M | 1 | 181 | 520s | 🔴 Moderate traffic, 89.57% uptime |
-| [timeline](https://timeline.ecosyste.ms) | [timeline](https://github.com/ecosyste-ms/timeline) | 51.15.160.73 | Very Large | 0.7M | - | 8 | 6 | 419s | ✅ 99.39% uptime (217% error rate anomaly) |
+| [timeline](https://timeline.ecosyste.ms) | [timeline](https://github.com/ecosyste-ms/timeline) | 51.15.160.73 | Very Large | 0.7M | - | 8 | 6 | 419s | 🔴 Database query timeouts, 6,686+ failures |
 | [parser](https://parser.ecosyste.ms) | [parser](https://github.com/ecosyste-ms/parser) | 195.154.81.95 | Large | 29.2M | 6.9M | 2 | 6 | 561s | ✅ High traffic, 99.39% uptime |
 | [issues](https://issues.ecosyste.ms) | [issues](https://github.com/ecosyste-ms/issues) | 51.159.56.73 | Large | 61.6M | 21.1M | 0 | 75 | 1200s | 🔴 High traffic, 89.83% uptime |
-| [archives](https://archives.ecosyste.ms) | [archives](https://github.com/ecosyste-ms/archives) | 51.159.31.55 | Medium | 1.7M | - | 0 | 43 | 605s | 🔴 Low traffic, 90.30% uptime |
+| [archives](https://archives.ecosyste.ms) | [archives](https://github.com/ecosyste-ms/archives) | 51.159.31.55 | Medium | 1.7M | - | 0 | 43 | 605s | 🔴 8.61% error rate, 90.30% uptime |
 | [awesome](https://awesome.ecosyste.ms) | [awesome](https://github.com/ecosyste-ms/awesome) | 195.154.82.7 | Large (shared) | 13.0M | 2.4M | 0 | - | - | ✅ Moderate traffic, stable |
 | [dependabot](https://dependabot.ecosyste.ms) | [dependabot](https://github.com/ecosyste-ms/dependabot) | 62.210.127.225 | Medium | 5.2M | 1.6M | 0 | - | - | ✅ Moderate traffic, stable |
 | [papers](https://papers.ecosyste.ms) | [papers](https://github.com/ecosyste-ms/papers) | 51.15.23.142 | Large | 1.0M | - | 0 | 1931 | 467s | 🔴 Low traffic, 95.79% uptime |
@@ -47,40 +47,40 @@ Analysis of AppSignal applications with server IPs and performance insights over
 5. Awesome: 13.0M requests + 2.4M bg jobs
 
 **Critical Attention Required:**
-- 🔴 **Repos: 31.00% uptime** (catastrophic - highest traffic service)
-- 🔴 **Packages: 68.09% uptime** (highest web traffic service affected)
-- 🔴 **OST: 86.65% uptime** (shared server issues)
-- 🔴 **Multiple shared services on 195.154.82.7 with poor uptime**
-- 🔴 Timeline 217% error rate (despite good 99.39% uptime - data anomaly)
+- 🔴 **Packages**: Database server completely unreachable (49 open incidents)
+- 🔴 **Repositories**: 70,000+ external API rate limit violations (GitHub/GitLab)
+- 🔴 **Parser**: 5.7M+ database connection pool exhaustion failures
+- 🔴 **Timeline**: 6,686+ database query timeouts on Very Large server
+- 🔴 **Archives**: 8.61% error rate with 90.30% uptime
 
 ## Key Findings
 
 ### Critical Issues Requiring Immediate Attention
 
-1. **Timeline App (51.15.160.73)** - 🔴 CATASTROPHIC UPTIME FAILURE
-   - **217% ERROR RATE**: More requests failing than succeeding
-   - Effectively zero uptime - service is non-functional
-   - Only 0.7M requests despite Very Large server (massive under-utilization due to failures)
-   - **Action**: EMERGENCY - Complete service investigation and likely rebuild required
+1. **Packages App (Database Crisis)** - 🔴 CRITICAL INFRASTRUCTURE FAILURE
+   - **HIGHEST WEB TRAFFIC**: 168.1M requests over 30 days
+   - **Database server 195.154.29.88 completely unreachable**
+   - 49 open incidents - entire service failing due to database connectivity
+   - 77.4M background jobs cannot process due to database failure
+   - **Action**: EMERGENCY - Database server recovery required
 
-2. **Packages App (51.15.23.142 + 195.154.29.88 DB)** - 🔴 CRITICAL UPTIME ISSUES
-   - **HIGHEST WEB TRAFFIC**: 167.1M requests over 30 days
-   - **4.97% ERROR RATE**: Only 95% success rate (below 99% uptime threshold)
-   - 58.8M background jobs, 49 open incidents
-   - Critical database connectivity issues to 195.154.29.88 affecting entire service
-   - **Action**: Database server needs immediate attention/upgrade
+2. **Repositories App (195.154.87.126)** - 🔴 EXTERNAL DEPENDENCY CRISIS
+   - **3rd HIGHEST TRAFFIC**: 87.2M web requests + 133M background jobs over 30 days
+   - **70,000+ API rate limit violations** across GitHub and GitLab APIs
+   - 44 open incidents, background processing severely impacted
+   - **Action**: Multiple API tokens, intelligent rate limiting implementation
 
-3. **Repositories App (195.154.87.126)** - ⚠️ HIGHEST TOTAL VOLUME
-   - **MASSIVE SCALE**: 86.4M web requests + 132.4M background jobs over 30 days
-   - 44 open incidents, heavy API rate limiting (GitHub/GitLab)
-   - Most background job processing of any service (2.25x more than web requests)
-   - **Action**: Consider load balancing or background job optimization
+3. **Parser App (195.154.81.95)** - 🔴 DATABASE CONNECTION POOL CRISIS
+   - **2nd HIGHEST TRAFFIC**: 29.3M requests over 30 days
+   - **5.7M+ database connection failures** ("too many clients already")
+   - Background job processing blocked by connection exhaustion
+   - **Action**: Increase connection pool limits or database optimization
 
-4. **Parser App (195.154.81.95)** - 🔴 CRITICAL  
-   - 4.4M+ connection failures to PostgreSQL
-   - "Too many clients already" errors
-   - Background job processing severely impacted
-   - **Action**: Increase DB connection limits or move to larger instance
+4. **Timeline App (51.15.160.73)** - 🔴 DATABASE PERFORMANCE CRISIS
+   - **6,686+ database query timeouts** over 30 days
+   - Very Large server massively under-utilized (23K daily requests)
+   - Core functionality failing due to inefficient database queries
+   - **Action**: Query optimization and database performance tuning
 
 ### Overwhelmed Server Analysis
 
@@ -120,12 +120,13 @@ Analysis of AppSignal applications with server IPs and performance insights over
 
 ### Recommendations
 
-1. **EMERGENCY**: Repositories service (31.00% uptime) - catastrophic failure of highest volume service
-2. **EMERGENCY**: Packages service (68.09% uptime) - critical failure affecting highest web traffic
-3. **HIGH PRIORITY**: Investigate 195.154.82.7 shared server - multiple services with poor uptime
-4. **HIGH PRIORITY**: Timeline error rate investigation (217% error rate vs 99.39% uptime inconsistency)
-5. **Medium Priority**: Services below 90% uptime (Commits, Docker, Issues, Archives, Diff, Licenses, OST)
-6. **Note**: Only Timeline (99.39%) and Parser (99.39%) meet acceptable uptime standards
+1. **EMERGENCY**: Packages database server (195.154.29.88) - complete infrastructure failure affecting highest traffic service
+2. **CRITICAL**: Repositories API rate limiting - 70,000+ violations blocking 3rd highest traffic service  
+3. **CRITICAL**: Parser database connection pool - 5.7M+ failures affecting 2nd highest traffic service
+4. **HIGH PRIORITY**: Timeline query optimization - 6,686+ timeouts on over-provisioned Very Large server
+5. **HIGH PRIORITY**: Archives error rate reduction - 8.61% error rate affecting API functionality
+6. **MEDIUM PRIORITY**: Ruby Redis connectivity - blocking background processing for Ruby ecosystem
+7. **INVESTIGATION**: SBOM service activity - zero traffic detected, verify service status
 
 ## Legend
 - 🔴 Critical issues requiring immediate attention
@@ -148,7 +149,13 @@ This analysis was created using Claude Code with the AppSignal MCP (Model Contex
 - **Web requests (30d)**: `transaction_duration` COUNT with `namespace: web` filter
 - **Background jobs (30d)**: `transaction_duration` COUNT with `namespace: background` filter  
 - **Open incidents**: Current exception incidents requiring attention
+- **Error rates**: Calculated as `transaction_exception_count` ÷ `transaction_duration COUNT` × 100
 - **Server information**: IP addresses, sizes, and current utilization patterns
+
+### Important Correction:
+- **Error Rate Calculation**: Earlier versions incorrectly used `transaction_exception_rate` as a percentage
+- **Corrected Method**: Error rates now calculated as (exceptions ÷ requests) × 100
+- **Example**: Archives shows 8.61% error rate (150,662 exceptions ÷ 1,748,976 requests)
 
 ### Claude Prompt for Regeneration:
 ```
