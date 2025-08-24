@@ -27,7 +27,7 @@
 
 ## Critical Issues
 
-### =4 **OPEN INCIDENT - Redis Connection Failure**
+### **CRITICAL** **OPEN INCIDENT - Redis Connection Failure**
 - **Incident #13**: RedisClient::CannotConnectError
 - **Occurrences**: 69 total, 20 recent
 - **Last Seen**: August 4, 2025
@@ -36,7 +36,7 @@
 
 ## Performance Characteristics
 
-### =Ä **Simple Web Service with Background Job Issues**
+### **HIGH PRIORITY** **Simple Web Service with Background Job Issues**
 - **Very low web traffic**: 44K requests over 30 days (~1.5K per day)
 - **Minimal API usage**: Only 7 total API requests
 - **Primarily informational**: 99.98% traffic to homepage
@@ -70,25 +70,25 @@
 
 ## Action Items
 
-### =4 **CRITICAL - Fix Redis Connection**
+### **CRITICAL** **CRITICAL - Fix Redis Connection**
 1. **Investigate Redis connectivity** - resolve redis://dokku-redis-licenses:6379 connection failure
 2. **Restart Redis service** - check if Redis container/service is running
 3. **Verify network connectivity** - ensure Docker container can reach Redis
 4. **Update Redis configuration** - may need to update connection string or credentials
 
-### =Ê **HIGH PRIORITY**
+### **HIGH PRIORITY**
 1. **Background job recovery** - process backlogged jobs once Redis is fixed
 2. **Monitoring setup** - alert on background job failures
 3. **Health check implementation** - add Redis connectivity check to health endpoint
 4. **Connection pooling** - implement Redis connection pooling for reliability
 
-### ™ **MEDIUM PRIORITY**
+### **LOW PRIORITY**  **MEDIUM PRIORITY**
 1. **API development** - consider if license API endpoints need enhancement
 2. **Caching strategy** - implement caching for license data
 3. **Content optimization** - optimize homepage for the 99.98% of traffic
 4. **Documentation** - improve API documentation if usage grows
 
-### =È **MONITORING**
+### **HIGH PRIORITY** **MONITORING**
 1. **Redis monitoring** - track Redis connection health and performance
 2. **Background job monitoring** - alert on job processing failures
 3. **API usage tracking** - monitor if API usage increases over time
@@ -110,7 +110,7 @@
 
 ## Recommendations
 
-**Status**: =4 **REQUIRES IMMEDIATE ATTENTION** - Redis connection failure blocking background job processing despite stable web traffic.
+**Status**: CRITICAL **REQUIRES IMMEDIATE ATTENTION** - Redis connection failure blocking background job processing despite stable web traffic.
 
 **Priority Actions**:
 1. **CRITICAL**: Fix Redis connection to restore background job functionality

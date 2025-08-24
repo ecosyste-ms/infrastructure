@@ -2,7 +2,7 @@
 
 This repository contains comprehensive infrastructure documentation, performance analysis, and operational insights for the Ecosyste.ms platform - a comprehensive open source ecosystem analysis platform.
 
-## 📊 What's Included
+## What's Included
 
 ### Infrastructure Analysis
 - **[services.md](./services.md)** - Complete infrastructure overview with performance metrics for all 22 services
@@ -16,7 +16,7 @@ Real-time analysis of:
 - **Infrastructure utilization** across 11 servers (Very Large to Medium configurations)
 - **Critical issue tracking** with severity assessment and action items
 
-## 🏗️ Platform Architecture
+## Platform Architecture
 
 **Ecosyste.ms** is a distributed platform providing comprehensive analysis of the open source ecosystem, including:
 
@@ -44,7 +44,7 @@ Real-time analysis of:
 - **[diff](./services/diff.md)** - Code difference analysis
 - **[archives](./services/archives.md)** - Archive management and access
 
-## 📈 Performance Metrics
+## Performance Metrics
 
 **Traffic Distribution (30-day analysis):**
 - **Ultra-High Traffic**: 3 services (>50M requests each)
@@ -58,7 +58,7 @@ Real-time analysis of:
 - **Under-provisioned**: 3 services experiencing performance issues due to resource constraints
 - **Development/Optimization**: Services with complex data requirements under active development
 
-## 📚 Documentation Structure
+## Documentation Structure
 
 ### Service Documentation Template
 Each service file includes:
@@ -76,13 +76,13 @@ Each service file includes:
 - **Multi-dimensional Analysis** - Web traffic, background processing, incident tracking, and resource utilization
 - **Automated Documentation Generation** - Claude Code with systematic data collection and analysis
 
-## 🔧 Issue Tracking & Improvements
+## Issue Tracking & Improvements
 
 For infrastructure issues, improvements, and operational questions:
 - **GitHub Issues**: https://github.com/ecosyste-ms/infrastructure/issues
 - **Service-specific Issues**: Each service documentation includes links to relevant GitHub repositories
 
-## 🛠️ Contributing
+## Contributing
 
 This infrastructure documentation is maintained using:
 - **Claude Code** for automated analysis and documentation generation

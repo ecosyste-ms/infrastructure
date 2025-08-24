@@ -15,7 +15,7 @@
 
 ## Critical Issue: No AppSignal Data
 
-### =4 **AppSignal Integration Problem**
+### **CRITICAL** **AppSignal Integration Problem**
 The Dashboard service is **not reporting any metrics to AppSignal**, despite being listed as an available application. This indicates a fundamental monitoring issue.
 
 **Possible Causes**:
@@ -37,7 +37,7 @@ The Dashboard service is **not reporting any metrics to AppSignal**, despite bei
 
 ## Service Status Assessment
 
-### =4 **UNKNOWN STATUS**
+### **CRITICAL** **UNKNOWN STATUS**
 Without metrics data, we cannot assess:
 - Traffic volumes
 - Error rates
@@ -48,27 +48,27 @@ Without metrics data, we cannot assess:
 
 ## Action Items
 
-### =¨ **IMMEDIATE (Critical)**
+### **HIGH PRIORITY** **IMMEDIATE (Critical)**
 1. **Service health check** - Verify if dashboard.ecosyste.ms is accessible
 2. **Application logs review** - Check server logs for application startup/runtime errors
 3. **AppSignal integration check** - Verify gem installation and configuration
 4. **Process monitoring** - Confirm application processes are running
 5. **Database connectivity** - Test database connections and migrations
 
-### =4 **HIGH PRIORITY**
+### **CRITICAL** **HIGH PRIORITY**
 1. **Deployment verification** - Ensure latest code is properly deployed
 2. **Environment configuration** - Verify all environment variables are set
 3. **Dependency check** - Ensure all required services/databases are available
 4. **SSL/DNS verification** - Confirm domain and certificate are working
 5. **Load balancer health** - Check if service is receiving traffic
 
-###   **MEDIUM PRIORITY**  
+### **LOW PRIORITY**  **MEDIUM PRIORITY**  
 1. **Monitoring setup** - Implement comprehensive application monitoring
 2. **Health check endpoint** - Add `/health` endpoint for service verification
 3. **Error tracking** - Set up error reporting and alerting
 4. **Performance baseline** - Establish metrics once service is restored
 
-### =Ê **MONITORING SETUP**
+### **HIGH PRIORITY** **MONITORING SETUP**
 1. **AppSignal integration** - Fix metrics reporting
 2. **Uptime monitoring** - Add external service monitoring
 3. **Log aggregation** - Centralize application logs
@@ -93,7 +93,7 @@ Without metrics data, we cannot assess:
 
 The Dashboard service represents a **critical monitoring gap** in the infrastructure. As a dashboard service, it likely provides important visibility into other services, making its restoration a high priority.
 
-**Status**: =4 **SERVICE DOWN OR MISCONFIGURED** - Requires immediate investigation and resolution. Without basic metrics, the service is effectively invisible to monitoring and may not be serving users.
+**Status**: CRITICAL **SERVICE DOWN OR MISCONFIGURED** - Requires immediate investigation and resolution. Without basic metrics, the service is effectively invisible to monitoring and may not be serving users.
 
 ## Recommendations
 

@@ -44,7 +44,7 @@
 
 ## Critical Issues
 
-### =4 **SEVERE DATABASE PERFORMANCE PROBLEMS**
+### **CRITICAL** **SEVERE DATABASE PERFORMANCE PROBLEMS**
 
 #### **Database Query Timeouts** (3 major incidents)
 - **Incident #41**: PG::QueryCanceled in EventsController#user (4,230 occurrences, 996 recent)
@@ -65,7 +65,7 @@
 
 ## Performance Characteristics
 
-### =4 **DATABASE-INTENSIVE SERVICE WITH OPTIMIZATION CHALLENGES**
+### **CRITICAL** **DATABASE-INTENSIVE SERVICE WITH OPTIMIZATION CHALLENGES**
 - **Complex data service**: 0.7M requests over 30 days (~23K per day) handling billions of timeline events
 - **API-dominant**: 87.7% traffic through summary API endpoint
 - **Database-intensive**: Timeline data with billions of rows in single table requires complex queries
@@ -100,25 +100,25 @@
 
 ## Action Items
 
-### =4 **CRITICAL - Database Performance Emergency**
+### **CRITICAL** **CRITICAL - Database Performance Emergency**
 1. **Query timeout investigation** - analyze slow queries causing 6,686+ timeout errors
 2. **Database query optimization** - optimize EventsController#user and EventsController#show queries
 3. **Database indexing review** - ensure proper indexes for timeline data queries
 4. **Query performance monitoring** - implement query performance tracking and alerts
 
-### =4 **HIGH PRIORITY**
+### **CRITICAL** **HIGH PRIORITY**
 1. **SecureHeaders configuration** - fix security header configuration (99 occurrences)
 2. **Template error resolution** - fix undefined method 'each' error in events index
 3. **Event import reliability** - fix Net::ReadTimeout issues in event data imports
 4. **Background job investigation** - determine why no background jobs are running
 
-### � **INFRASTRUCTURE OPTIMIZATION**
+### **LOW PRIORITY**  **INFRASTRUCTURE OPTIMIZATION**
 1. **Database partitioning** - implement table partitioning for billions of timeline rows
 2. **Database connection optimization** - optimize database connection pooling and settings
 3. **Caching implementation** - implement aggressive caching for timeline data
 4. **Query result caching** - cache expensive timeline query results
 
-### =� **MONITORING AND PERFORMANCE**
+### **CRITICAL** **MONITORING AND PERFORMANCE**
 1. **Database query monitoring** - comprehensive slow query logging and analysis
 2. **Response time tracking** - monitor API endpoint performance (87.7% of traffic)
 3. **Error rate monitoring** - track and alert on query timeout patterns
@@ -145,7 +145,7 @@
 
 ## Recommendations
 
-**Status**: =4 **DATABASE SCALE OPTIMIZATION REQUIRED** - Service handling billions of timeline events requires database optimization for large-scale data queries.
+**Status**: CRITICAL **DATABASE SCALE OPTIMIZATION REQUIRED** - Service handling billions of timeline events requires database optimization for large-scale data queries.
 
 **Emergency Response Protocol**:
 1. **IMMEDIATE**: Database query performance analysis and optimization

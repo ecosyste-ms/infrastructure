@@ -53,7 +53,7 @@
 
 ## Critical Issues
 
-### =4 **MASSIVE EXTERNAL API RATE LIMITING CRISIS**
+### **CRITICAL** **MASSIVE EXTERNAL API RATE LIMITING CRISIS**
 **Over 100,000 API Rate Limit Violations Across GitHub and GitLab**
 
 #### **GitHub API Rate Limiting** (Multiple severe incidents)
@@ -85,7 +85,7 @@
 
 ## Performance Characteristics
 
-### =4 **ULTRA-HIGH VOLUME SERVICE CRIPPLED BY EXTERNAL DEPENDENCIES**
+### **CRITICAL** **ULTRA-HIGH VOLUME SERVICE CRIPPLED BY EXTERNAL DEPENDENCIES**
 - **Massive scale**: 87.2M web requests + 133M background jobs (3rd highest traffic, highest background processing)
 - **Repository-centric**: Core infrastructure for repository data and analysis
 - **External API dependent**: Heavy reliance on GitHub, GitLab, and other Git hosting APIs
@@ -125,27 +125,27 @@
 
 ## Action Items
 
-### =4 **EMERGENCY RESPONSE (Critical External API Crisis)**
+### **CRITICAL** **EMERGENCY RESPONSE (Critical External API Crisis)**
 1. **IMMEDIATE**: GitHub API rate limit quota emergency increase
 2. **CRITICAL**: GitLab API rate limit quota emergency increase
 3. **URGENT**: Implement API rate limiting backoff and queuing strategies
 4. **EMERGENCY**: API credential rotation and scaling (multiple API keys)
 5. **ESCALATE**: This affects the 3rd highest traffic service with highest background processing
 
-### =4 **API RATE LIMITING MITIGATION**
+### **CRITICAL** **API RATE LIMITING MITIGATION**
 1. **Multiple API tokens deployment** - spread load across multiple GitHub/GitLab API keys
 2. **Intelligent rate limiting** - implement exponential backoff and queue management
 3. **API call optimization** - reduce unnecessary API calls and batch requests
 4. **Background job throttling** - implement job rate limiting to stay within API quotas
 5. **Caching strategy** - cache repository data to reduce external API dependencies
 
-### =Ê **POST-MITIGATION PRIORITIES**
+### **HIGH PRIORITY** **POST-MITIGATION PRIORITIES**
 1. **API monitoring implementation** - track API usage against quotas in real-time
 2. **Background job optimization** - prioritize critical vs. non-critical updates
 3. **Error handling improvement** - graceful degradation when APIs are unavailable
 4. **Performance monitoring** - track external API response times and success rates
 
-### ™ **INFRASTRUCTURE IMPROVEMENTS**
+### **LOW PRIORITY**  **INFRASTRUCTURE IMPROVEMENTS**
 1. **API federation** - distribute load across multiple Git hosting providers
 2. **Data freshness tiers** - different update frequencies for different data types
 3. **Circuit breakers** - automatic fallback when external APIs fail
@@ -173,7 +173,7 @@
 
 ## Recommendations
 
-**Status**: =4 **CRITICAL EXTERNAL DEPENDENCY CRISIS** - The 3rd highest-traffic service with highest background processing is severely impacted by external API rate limiting across GitHub and GitLab.
+**Status**: CRITICAL **CRITICAL EXTERNAL DEPENDENCY CRISIS** - The 3rd highest-traffic service with highest background processing is severely impacted by external API rate limiting across GitHub and GitLab.
 
 **Emergency Response Protocol**:
 1. **IMMEDIATE**: API quota negotiations with GitHub and GitLab

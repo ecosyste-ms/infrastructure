@@ -37,7 +37,7 @@
 
 ## Critical Issues
 
-### =4 **CATASTROPHIC DATABASE CONNECTION FAILURE**
+### **CRITICAL** **CATASTROPHIC DATABASE CONNECTION FAILURE**
 **Complete Database Connectivity Crisis with 5.7M+ Connection Failures**
 
 #### **Most Severe Database Issues**
@@ -63,7 +63,7 @@
 
 ## Performance Characteristics
 
-### =4 **HIGH-VOLUME API SERVICE IN TOTAL DATABASE FAILURE**
+### **CRITICAL** **HIGH-VOLUME API SERVICE IN TOTAL DATABASE FAILURE**
 - **Massive API traffic**: 29.3M requests over 30 days (~978K per day)
 - **API-only architecture**: 99.8% traffic through job management APIs
 - **Background-heavy processing**: 6.9M background jobs for parsing operations
@@ -105,27 +105,27 @@
 
 ## Action Items
 
-### =4 **EMERGENCY RESPONSE (Critical System Failure)**
+### **CRITICAL** **EMERGENCY RESPONSE (Critical System Failure)**
 1. **IMMEDIATE**: Database connection pool emergency expansion
 2. **CRITICAL**: PostgreSQL server stability investigation (172.17.0.2)
 3. **URGENT**: Database connection limits analysis and tuning
 4. **EMERGENCY**: Implement database connection pooling (PgBouncer)
 5. **ESCALATE**: This affects the 2nd highest traffic service in infrastructure
 
-### =4 **DATABASE CONNECTION POOL CRISIS**
+### **CRITICAL** **DATABASE CONNECTION POOL CRISIS**
 1. **PostgreSQL max_connections increase** - expand connection limits immediately
 2. **Connection pooling implementation** - deploy PgBouncer or similar
 3. **Background job throttling** - reduce concurrent job processing temporarily
 4. **Database server resource analysis** - check CPU, memory, disk I/O
 5. **Connection leak detection** - identify and fix connection leaks
 
-### =Ê **POST-RECOVERY PRIORITIES**
+### **HIGH PRIORITY** **POST-RECOVERY PRIORITIES**
 1. **Monitoring implementation** - comprehensive database connection monitoring
 2. **Performance optimization** - optimize high-frequency job status queries
 3. **Connection management** - implement proper connection lifecycle management
 4. **Load balancing** - consider database read replicas for status queries
 
-### ™ **INFRASTRUCTURE IMPROVEMENTS**
+### **LOW PRIORITY**  **INFRASTRUCTURE IMPROVEMENTS**
 1. **Database scaling** - implement read replicas for status queries
 2. **Connection pooling** - permanent PgBouncer deployment
 3. **Caching strategy** - cache job status to reduce database load
@@ -153,7 +153,7 @@
 
 ## Recommendations
 
-**Status**: =4 **TOTAL SYSTEM FAILURE - EMERGENCY RESPONSE REQUIRED** - The 2nd highest-traffic service is completely non-functional due to database connection pool exhaustion.
+**Status**: CRITICAL **TOTAL SYSTEM FAILURE - EMERGENCY RESPONSE REQUIRED** - The 2nd highest-traffic service is completely non-functional due to database connection pool exhaustion.
 
 **Emergency Response Protocol**:
 1. **IMMEDIATE**: Database connection pool emergency expansion

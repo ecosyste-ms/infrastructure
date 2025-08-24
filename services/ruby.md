@@ -43,7 +43,7 @@
 
 ## Critical Issues
 
-### =4 **REDIS CONNECTION FAILURE**
+### **CRITICAL** **REDIS CONNECTION FAILURE**
 - **Incident #10**: RedisClient::CannotConnectError
 - **84 total occurrences**, 20 recent (as of August 4, 2025)
 - **Connection refused**: redis://dokku-redis-ruby-production:6379
@@ -52,7 +52,7 @@
 
 ## Performance Characteristics
 
-### =Ê **Low-Traffic Ruby Ecosystem Service with Background Processing Issues**
+### **HIGH PRIORITY** **Low-Traffic Ruby Ecosystem Service with Background Processing Issues**
 - **Low web traffic**: 35K requests over 30 days (~1.2K per day)
 - **Moderate background processing**: 22K background jobs for Ruby gem analysis
 - **Ruby-focused**: Specialized service for Ruby/RubyGems ecosystem analysis
@@ -88,25 +88,25 @@
 
 ## Action Items
 
-### =4 **CRITICAL - Fix Redis Connection**
+### **CRITICAL** **CRITICAL - Fix Redis Connection**
 1. **Redis connectivity restoration** - resolve redis://dokku-redis-ruby-production:6379 connection failure
 2. **Redis service restart** - check if Redis container/service is running
 3. **Network connectivity verification** - ensure Docker container can reach Redis
 4. **Redis configuration update** - may need to update connection string or credentials
 
-### =Ê **HIGH PRIORITY**
+### **HIGH PRIORITY**
 1. **Background job recovery** - process backlogged Ruby ecosystem jobs once Redis is restored
 2. **Redis monitoring setup** - implement Redis health monitoring and alerts
 3. **Connection pooling** - implement Redis connection pooling for reliability
 4. **Job queue health checks** - ensure background processing stays operational
 
-### ™ **MEDIUM PRIORITY**
+### **LOW PRIORITY**  **MEDIUM PRIORITY**
 1. **Performance optimization** - optimize Ruby project detail pages (44.5% of traffic)
 2. **API development** - expand API functionality if demand increases
 3. **Caching strategy** - implement caching for frequently accessed Ruby project data
 4. **Community features** - enhance contributor and community functionality
 
-### =È **MONITORING**
+### **HIGH PRIORITY** **MONITORING**
 1. **Redis health monitoring** - track Redis connection and performance
 2. **Background job monitoring** - alert on job processing failures and queue buildup
 3. **Ruby ecosystem monitoring** - track Ruby project analysis completeness
@@ -133,7 +133,7 @@
 
 ## Recommendations
 
-**Status**: =4 **REQUIRES IMMEDIATE ATTENTION** - Redis connection failure blocking background processing despite stable web traffic.
+**Status**: CRITICAL **REQUIRES IMMEDIATE ATTENTION** - Redis connection failure blocking background processing despite stable web traffic.
 
 **Priority Actions**:
 1. **CRITICAL**: Fix Redis connection to restore background job processing

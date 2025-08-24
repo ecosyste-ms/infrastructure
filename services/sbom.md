@@ -25,7 +25,7 @@
 
 ## Critical Issues
 
-### ª **NO ACTIVITY DETECTED**
+###   **NO ACTIVITY DETECTED**
 - **No web requests recorded** over 30-day monitoring period
 - **No background job activity** detected
 - **No application incidents** reported
@@ -39,7 +39,7 @@
 
 ## Performance Characteristics
 
-### ª **INACTIVE OR NEWLY DEPLOYED SERVICE**
+###   **INACTIVE OR NEWLY DEPLOYED SERVICE**
 - **Zero activity**: No measurable traffic or background processing
 - **SBOM focus**: Software Bill of Materials analysis service
 - **Specialized functionality**: Likely serves specific security/compliance use cases
@@ -73,25 +73,25 @@
 
 ## Action Items
 
-### = **INVESTIGATION REQUIRED**
+### **INVESTIGATION REQUIRED**
 1. **Service status verification** - confirm if SBOM service is intended to be active
 2. **Traffic routing check** - verify if requests are properly reaching the service
 3. **Configuration review** - ensure AppSignal monitoring is properly configured
 4. **Deployment status** - confirm if service is fully deployed and accessible
 
-### =Ê **SERVICE ACTIVATION (If Intended to be Active)**
+### **SERVICE ACTIVATION (If Intended to be Active)**
 1. **Feature promotion** - communicate SBOM service availability to users
 2. **Integration documentation** - provide API documentation for SBOM integration
 3. **Usage examples** - create tutorials and examples for SBOM functionality
 4. **Monitoring verification** - ensure traffic logging is working correctly
 
-### =à **DEVELOPMENT COMPLETION (If Still in Development)**
+### **DEVELOPMENT COMPLETION (If Still in Development)**
 1. **Development roadmap** - establish timeline for SBOM service completion
 2. **Feature planning** - define SBOM functionality and use cases
 3. **Integration design** - plan how SBOM service integrates with ecosystem
 4. **Testing strategy** - develop testing approach for SBOM functionality
 
-### =È **MONITORING SETUP**
+### **MONITORING SETUP**
 1. **Health check implementation** - add basic health/status endpoints
 2. **Usage tracking** - implement metrics for SBOM generation and analysis
 3. **Performance monitoring** - track SBOM processing times and success rates
@@ -118,7 +118,7 @@
 
 ## Recommendations
 
-**Status**: ª **INACTIVE/INVESTIGATION REQUIRED** - Service shows no activity over 30-day period despite being connected to monitoring infrastructure.
+**Status**:   **INACTIVE/INVESTIGATION REQUIRED** - Service shows no activity over 30-day period despite being connected to monitoring infrastructure.
 
 **Immediate Actions**:
 1. **CLARIFY**: Determine intended status of SBOM service (active, development, future)

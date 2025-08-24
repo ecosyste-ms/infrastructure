@@ -52,7 +52,7 @@
 
 ## Critical Issues
 
-### =4 **CATASTROPHIC DATABASE FAILURE**
+### **CRITICAL** **CATASTROPHIC DATABASE FAILURE**
 Multiple critical database connectivity and disk space issues:
 
 #### **Database Connection Failures** (8 open incidents)
@@ -73,7 +73,7 @@ Multiple critical database connectivity and disk space issues:
 
 ## Performance Characteristics
 
-### =4 **Service in Critical Failure State**
+### **CRITICAL** **Service in Critical Failure State**
 - **High traffic volume**: 7.2M requests over 30 days (~240K per day)
 - **Substantial background processing**: 1.0M background jobs
 - **Multiple system failures**: Database, Redis, and storage issues
@@ -108,27 +108,27 @@ Multiple critical database connectivity and disk space issues:
 
 ## Action Items
 
-### =4 **EMERGENCY (Critical System Failure)**
+### **CRITICAL** **EMERGENCY (Critical System Failure)**
 1. **Immediate PostgreSQL disk space cleanup** - resolve disk full errors preventing database operations
 2. **Database connection pool investigation** - fix connection refused errors
 3. **Database restart/recovery** - resolve "database system is shutting down/starting up" errors
 4. **Redis connectivity fix** - restore background job processing
 5. **Service health assessment** - evaluate full scope of system failures
 
-### =4 **URGENT DATABASE RECOVERY**
+### **CRITICAL** **URGENT DATABASE RECOVERY**
 1. **PostgreSQL disk space expansion** - increase available storage immediately
 2. **Shared memory configuration** - adjust PostgreSQL shared memory settings
 3. **Connection pool tuning** - increase max connections and optimize pool settings
 4. **Database performance analysis** - identify queries causing resource exhaustion
 5. **Data archival** - move old data to reduce database size
 
-### =Ê **HIGH PRIORITY**
+### **HIGH PRIORITY**
 1. **Redis service restoration** - fix dokku-redis-opencollective connection
 2. **Background job recovery** - process backlogged jobs once Redis is restored
 3. **Error monitoring** - implement comprehensive alerting for database/Redis issues
 4. **Performance monitoring** - add database and Redis health monitoring
 
-### ™ **INFRASTRUCTURE RECOVERY**
+### **LOW PRIORITY**  **INFRASTRUCTURE RECOVERY**
 1. **Database optimization** - query performance analysis and indexing
 2. **Connection pooling** - implement PgBouncer or similar connection pooling
 3. **Caching strategy** - reduce database load with Redis caching (once Redis is fixed)
@@ -149,7 +149,7 @@ Multiple critical database connectivity and disk space issues:
 
 ## Recommendations
 
-**Status**: =4 **SYSTEM FAILURE - EMERGENCY RESPONSE REQUIRED** - Service experiencing catastrophic database and Redis failures affecting core functionality.
+**Status**: CRITICAL **SYSTEM FAILURE - EMERGENCY RESPONSE REQUIRED** - Service experiencing catastrophic database and Redis failures affecting core functionality.
 
 **Emergency Actions Required**:
 1. **CRITICAL**: Resolve PostgreSQL disk space crisis immediately

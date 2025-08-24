@@ -50,7 +50,7 @@
 
 ## Critical Issues
 
-### =4 **MULTIPLE SYSTEM INTEGRATION FAILURES**
+### **CRITICAL** **MULTIPLE SYSTEM INTEGRATION FAILURES**
 
 #### **Meilisearch Timeout Issues** (4 open incidents)
 - **Incident #78**: SyncProjectWorker timeouts (694 occurrences, most severe)
@@ -70,7 +70,7 @@
 
 ## Performance Characteristics
 
-### =Ê **High-Traffic OST Platform with Integration Issues**
+### **HIGH PRIORITY** **High-Traffic OST Platform with Integration Issues**
 - **Moderate web traffic**: 1.9M requests over 30 days (~64K per day)
 - **Background processing**: 77K background jobs for project synchronization
 - **Contributor-focused**: 43.7% of traffic viewing contributor profiles
@@ -107,25 +107,25 @@
 
 ## Action Items
 
-### =4 **CRITICAL - Fix External Service Dependencies**
+### **CRITICAL - Fix External Service Dependencies**
 1. **Meilisearch connectivity issues** - resolve timeout errors affecting search and sync
 2. **Redis connection restoration** - fix redis://dokku-redis-ost:6379 connectivity
 3. **Search service optimization** - improve Meilisearch response times
 4. **Background job recovery** - process backlogged synchronization jobs
 
-### =Ê **HIGH PRIORITY**
+### **HIGH PRIORITY**
 1. **Application error fixes** - resolve NoMethodError in CategoriesController and ReadmeParser
 2. **Search performance tuning** - optimize Meilisearch queries and indexing
 3. **Connection pooling** - implement Redis connection pooling for reliability
 4. **Error monitoring** - comprehensive alerting for external service failures
 
-### ™ **MEDIUM PRIORITY**
+### **LOW PRIORITY**  **MEDIUM PRIORITY**
 1. **Caching strategy** - reduce load on Meilisearch and database
 2. **API optimization** - improve API endpoint performance
 3. **Search fallbacks** - implement fallback search when Meilisearch fails
 4. **Performance monitoring** - track response times for high-traffic endpoints
 
-### =È **MONITORING**
+### **MONITORING**
 1. **External service monitoring** - Meilisearch and Redis health checks
 2. **Search performance tracking** - query response times and success rates
 3. **Background job monitoring** - queue depth and failure rate alerts
@@ -152,7 +152,7 @@
 
 ## Recommendations
 
-**Status**: =4 **REQUIRES ATTENTION** - External service integration failures affecting search functionality and background processing.
+**Status**: CRITICAL **REQUIRES ATTENTION** - External service integration failures affecting search functionality and background processing.
 
 **Priority Actions**:
 1. **CRITICAL**: Fix Meilisearch timeout issues to restore search functionality

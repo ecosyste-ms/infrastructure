@@ -46,7 +46,7 @@
 
 ## Critical Issues
 
-### =á **APPLICATION LOGIC AND TEMPLATING ISSUES**
+### **APPLICATION LOGIC AND TEMPLATING ISSUES**
 
 #### **Pagination Validation Errors** (2 incidents)
 - **Incident #10**: Pagy::VariableError in ProjectsController#show (68 occurrences)
@@ -69,7 +69,7 @@
 
 ## Performance Characteristics
 
-### =Ê **Moderate-Traffic Academic Paper Platform**
+### **Moderate-Traffic Academic Paper Platform**
 - **Focused traffic**: 1.0M requests over 30 days (~33K per day)
 - **Paper-centric**: 84.5% of traffic viewing individual papers
 - **No background processing**: Pure web request-driven service
@@ -104,25 +104,25 @@
 
 ## Action Items
 
-### =á **HIGH PRIORITY - Fix Application Logic Issues**
+### **HIGH PRIORITY - Fix Application Logic Issues**
 1. **Pagination parameter validation** - fix Pagy::VariableError when page=0 is provided
 2. **SQL query security hardening** - resolve ActiveRecord::UnknownAttributeReference security issues
 3. **Template completion** - add missing templates for API and web format variants
 4. **Sitemap configuration** - create missing /usr/src/app/config/sitemap.rb file
 
-### ™ **MEDIUM PRIORITY**
+###      **MEDIUM PRIORITY**
 1. **Input validation** - comprehensive parameter validation for all controllers
 2. **Error handling** - improve error responses for malformed requests
 3. **API development** - expand API functionality if needed (currently minimal usage)
 4. **Performance optimization** - optimize paper detail page loading (84.5% of traffic)
 
-### =È **MONITORING**
+### **MONITORING**
 1. **Application error monitoring** - track SQL injection attempts and pagination errors
 2. **Performance monitoring** - track response times for paper detail pages
 3. **Security monitoring** - monitor for malicious SQL query attempts
 4. **Usage analytics** - track paper and project discovery patterns
 
-### =Ú **FUNCTIONALITY IMPROVEMENTS**
+### **FUNCTIONALITY IMPROVEMENTS**
 1. **Search enhancement** - improve paper and project search capabilities
 2. **API expansion** - develop more comprehensive API if demand increases
 3. **Content optimization** - improve paper detail page performance and UX
@@ -149,7 +149,7 @@
 
 ## Recommendations
 
-**Status**: =á **REQUIRES ATTENTION** - Moderate-traffic service with application logic issues that need fixing, especially security-related SQL query problems.
+**Status**: **REQUIRES ATTENTION** - Moderate-traffic service with application logic issues that need fixing, especially security-related SQL query problems.
 
 **Priority Actions**:
 1. **SECURITY**: Fix SQL query security issues (ActiveRecord::UnknownAttributeReference)

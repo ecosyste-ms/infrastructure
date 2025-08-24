@@ -32,7 +32,7 @@
 
 ## Performance Characteristics
 
-###   **Low Traffic with Uptime Issues**
+###    **Low Traffic with Uptime Issues**
 - **Very low traffic**: Only 0.2M requests over 30 days
 - **Uptime problems**: 88.40% (below 99% threshold)
 - **669 uptime monitor errors** indicate reliability issues
@@ -63,25 +63,25 @@
 
 ## Action Items
 
-###   **MEDIUM PRIORITY - Uptime Issues**
+###    **MEDIUM PRIORITY - Uptime Issues**
 1. **Investigate uptime problems** - 88.40% needs improvement to >99%
 2. **Analyze 669 monitoring errors** - identify patterns and root causes
 3. **Service stability review** - check application logs for failures
 4. **Resource monitoring** - ensure service isn't running out of memory/resources
 
-### = **INVESTIGATION REQUIRED**
+### **INVESTIGATION REQUIRED**
 1. **Error reporting verification** - confirm why no error rate data is available
 2. **Service usage analysis** - determine if low traffic is expected
 3. **Diff operation performance** - analyze JobsController#diff response times
 4. **Health monitoring** - implement better service health checks
 
-### =Ê **MONITORING IMPROVEMENTS**
+### **MONITORING IMPROVEMENTS**
 1. **Enhanced error tracking** - ensure all errors are properly reported
 2. **Uptime alerting** - set up alerts for service availability
 3. **Performance baselines** - establish response time expectations
 4. **Usage analytics** - track diff operation success rates
 
-### =' **SERVICE OPTIMIZATION**
+### **SERVICE OPTIMIZATION**
 1. **Diff operation efficiency** - optimize core diff functionality
 2. **Caching strategy** - consider caching for repeated diff requests
 3. **Resource allocation** - ensure adequate resources for diff operations
@@ -106,7 +106,7 @@
 
 ## Recommendations
 
-**Status**:   **STABLE but Needs Uptime Improvement** - Service is functionally working but has reliability issues that need addressing.
+**Status**:    **STABLE but Needs Uptime Improvement** - Service is functionally working but has reliability issues that need addressing.
 
 **Focus Areas**:
 1. **Priority**: Improve uptime from 88.40% to >99%
