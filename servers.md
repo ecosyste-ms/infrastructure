@@ -2,7 +2,8 @@
 
 | Service           | IP             | Requirements |
 |-------------------|----------------|--------------|
-| repos             | 195.154.87.126 | very high    |
+| repos db          | 195.154.87.126 | very high    |
+| repos web         | 51.158.156.109 | very high    |
 | timeline          | 51.15.160.73   | very high    |
 | packages db       | 195.154.29.88  | high         |
 | packages web      | 51.15.23.142   | high         |
@@ -36,7 +37,8 @@
 
 | Server         | Number of Services | Size       | Distro |
 |----------------|--------------------|------------|--------|
-| 195.154.87.126 | 1 (repos)          | Very Large | Ubuntu 20.04.6 LTS |
+| 195.154.87.126 | 1 (repos db)       | Very Large | Ubuntu 20.04.6 LTS |
+| 51.158.156.109 | 1 (repos web)      | Large      | Ubuntu 22.04.5 LTS |
 | 51.15.160.73   | 1 (timeline)       | Very Large | Ubuntu 22.04.5 LTS |
 | 51.15.23.142   | 2 (packages web, papers) | Large | Ubuntu 20.04.6 LTS |
 | 195.154.29.88  | 1 (packages db)    | Large      | Ubuntu 20.04.6 LTS |
