@@ -1,18 +1,19 @@
 # Services Overview
 
 Analysis of AppSignal applications with server IPs and performance insights over the last 30 days.
-*Generated: August 23, 2025*
+*Updated: September 11, 2025*
 
 ## Service Status Overview
 
 | Service | GitHub | IP Address | Server Size | Requests (30d) | Background Jobs (30d) | Open Incidents | Error Count | Avg Duration | Performance Status |
 |---------|--------|------------|-------------|----------------|----------------------|----------------|-------------|--------------|-------------------|
-| [repos](https://repos.ecosyste.ms) | [repos](https://github.com/ecosyste-ms/repos) | 195.154.87.126 | Very Large | 86.4M | 132.4M | 44 | 3590 | 3571s | 🔴 Highest volume, 31.00% uptime |
-| [packages](https://packages.ecosyste.ms) | [packages](https://github.com/ecosyste-ms/packages) | 51.15.23.142 | Large | 167.1M | 58.8M | 49 | 1832 | 1987s | 🔴 Most traffic, 68.09% uptime, 4.97% error rate |
+| [repos web](https://repos.ecosyste.ms) | [repos](https://github.com/ecosyste-ms/repos) | 51.158.156.109 | Very Large | 4.0M (2d) | 6.3M (2d) | 1 | 24431 | - | 🟡 GitHub API 503 errors |
+| [repos db](https://repos-db.ecosyste.ms) | [repos](https://github.com/ecosyste-ms/repos) | 195.154.87.126 | Very Large | - | - | - | - | - | ✅ Database server |
+| [packages](https://packages.ecosyste.ms) | [packages](https://github.com/ecosyste-ms/packages) | 51.15.23.142 | Large | 167.1M | 58.8M | 5 | Active | - | 🔴 Multiple error types, timeouts ongoing |
 | [commits](https://commits.ecosyste.ms) | [commits](https://github.com/ecosyste-ms/commits) | 195.154.29.100 | Large | 7.5M | 1.3M | 0 | 15 | 1396s | 🔴 Moderate traffic, 89.57% uptime |
 | [docker](https://docker.ecosyste.ms) | [docker](https://github.com/ecosyste-ms/docker) | 62.210.217.62 | Medium | 3.4M | 0.2M | 1 | 181 | 520s | 🔴 Moderate traffic, 89.57% uptime |
-| [timeline](https://timeline.ecosyste.ms) | [timeline](https://github.com/ecosyste-ms/timeline) | 51.15.160.73 | Very Large | 0.7M | - | 8 | 6 | 419s | 🔴 Database query timeouts, 6,686+ failures |
-| [parser](https://parser.ecosyste.ms) | [parser](https://github.com/ecosyste-ms/parser) | 195.154.81.95 | Large | 29.2M | 6.9M | 2 | 6 | 561s | ✅ High traffic, 99.39% uptime |
+| [timeline](https://timeline.ecosyste.ms) | [timeline](https://github.com/ecosyste-ms/timeline) | 51.15.160.73 | Very Large | 0.7M | - | 2 | 8110 | - | 🔴 Database query timeouts ongoing |
+| [parser](https://parser.ecosyste.ms) | [parser](https://github.com/ecosyste-ms/parser) | 195.154.81.95 | Large | 29.2M | 6.9M | 4 | 1.26M+ | - | 🔴 Database connection issues |
 | [issues](https://issues.ecosyste.ms) | [issues](https://github.com/ecosyste-ms/issues) | 51.159.56.73 | Large | 61.6M | 21.1M | 0 | 75 | 1200s | 🔴 High traffic, 89.83% uptime |
 | [archives](https://archives.ecosyste.ms) | [archives](https://github.com/ecosyste-ms/archives) | 51.159.31.55 | Medium | 1.7M | - | 0 | 43 | 605s | 🔴 8.61% error rate, 90.30% uptime |
 | [awesome](https://awesome.ecosyste.ms) | [awesome](https://github.com/ecosyste-ms/awesome) | 195.154.82.7 | Large (shared) | 13.0M | 2.4M | 0 | - | - | ✅ Moderate traffic, stable |
@@ -35,9 +36,9 @@ Analysis of AppSignal applications with server IPs and performance insights over
 **Total Infrastructure Metrics (30 days):**
 - **Web Requests**: ~473.4M across 18 applications
 - **Background Jobs**: ~226.9M across 14 applications  
-- **Open Incidents**: 105 total across 4 applications
+- **Open Incidents**: 7 total across 3 applications (significant improvement from 105)
 - **Active Applications**: 22 with traffic data + 1 with missing data
-- **Servers**: 11 total (2 Very Large, 7 Large, 2 Medium)
+- **Servers**: 12 total (3 Very Large including new repos DB, 7 Large, 2 Medium)
 
 **Top Traffic Applications:**
 1. Packages: 167.1M requests + 58.8M bg jobs
@@ -47,36 +48,43 @@ Analysis of AppSignal applications with server IPs and performance insights over
 5. Awesome: 13.0M requests + 2.4M bg jobs
 
 **Critical Attention Required:**
-- 🔴 **Packages**: Database server completely unreachable (49 open incidents)
-- 🔴 **Repositories**: 70,000+ external API rate limit violations (GitHub/GitLab)
-- 🔴 **Parser**: 5.7M+ database connection pool exhaustion failures
-- 🔴 **Timeline**: 6,686+ database query timeouts on Very Large server
+- 🔴 **Packages**: 5 open error types including Rack timeouts, template errors, NoMethodError
+- 🟡 **Repositories**: Split into web (51.158.156.109) and DB (195.154.87.126), GitHub API 503 errors ongoing
+- 🔴 **Parser**: 1.26M+ database connection failures still occurring
+- 🔴 **Timeline**: 8,110 query timeouts ongoing (was 6,686+)
 - 🔴 **Archives**: 8.61% error rate with 90.30% uptime
 
 ## Key Findings
 
-### Critical Issues Requiring Immediate Attention
+### Critical Issues Update - September 11, 2025
 
-1. **Packages App (Database Crisis)** - 🔴 CRITICAL INFRASTRUCTURE FAILURE
-   - **HIGHEST WEB TRAFFIC**: 168.1M requests over 30 days
-   - **Database server 195.154.29.88 completely unreachable**
-   - 49 open incidents - entire service failing due to database connectivity
-   - 77.4M background jobs cannot process due to database failure
-   - **Action**: EMERGENCY - Database server recovery required
+1. **Packages App** - 🔴 ACTIVE ERRORS
+   - **HIGHEST WEB TRAFFIC**: 167.1M requests over 30 days (8.6M in last 2 days)
+   - **5 open error types**: Rack::Timeout (1 day ago), UnknownFormat (2 days ago), Template::Error (7 days ago)
+   - NoMethodError and IpSpoofAttackError also active
+   - AppSignal API may not be returning these via MCP endpoint
+   - **Action**: Investigate timeout issues and method errors
 
-2. **Repositories App (195.154.87.126)** - 🔴 EXTERNAL DEPENDENCY CRISIS
+2. **Repositories App** - 🟡 INFRASTRUCTURE SPLIT
+   - **Service separated into Web and DB components**
+   - Web moved to 51.158.156.109 (was on 195.154.87.126)
+   - Database now on dedicated server 195.154.87.126
+   - GitHub API 503 errors ongoing (24,431 occurrences)
+   - **Action**: Monitor new architecture performance
+
+3. **Original Repositories Issue (Historical)** - 🔴 EXTERNAL DEPENDENCY CRISIS
    - **3rd HIGHEST TRAFFIC**: 87.2M web requests + 133M background jobs over 30 days
    - **70,000+ API rate limit violations** across GitHub and GitLab APIs
    - 44 open incidents, background processing severely impacted
    - **Action**: Multiple API tokens, intelligent rate limiting implementation
 
-3. **Parser App (195.154.81.95)** - 🔴 DATABASE CONNECTION POOL CRISIS
+4. **Parser App (195.154.81.95)** - 🔴 DATABASE CONNECTION POOL CRISIS
    - **2nd HIGHEST TRAFFIC**: 29.3M requests over 30 days
    - **5.7M+ database connection failures** ("too many clients already")
    - Background job processing blocked by connection exhaustion
    - **Action**: Increase connection pool limits or database optimization
 
-4. **Timeline App (51.15.160.73)** - 🔴 DATABASE PERFORMANCE CRISIS
+5. **Timeline App (51.15.160.73)** - 🔴 DATABASE PERFORMANCE CRISIS
    - **6,686+ database query timeouts** over 30 days
    - Very Large server massively under-utilized (23K daily requests)
    - Core functionality failing due to inefficient database queries
@@ -120,10 +128,10 @@ Analysis of AppSignal applications with server IPs and performance insights over
 
 ### Recommendations
 
-1. **EMERGENCY**: Packages database server (195.154.29.88) - complete infrastructure failure affecting highest traffic service
-2. **CRITICAL**: Repositories API rate limiting - 70,000+ violations blocking 3rd highest traffic service  
-3. **CRITICAL**: Parser database connection pool - 5.7M+ failures affecting 2nd highest traffic service
-4. **HIGH PRIORITY**: Timeline query optimization - 6,686+ timeouts on over-provisioned Very Large server
+1. **URGENT**: Packages has 5 active error types - Rack timeouts and template errors need attention
+2. **HIGH PRIORITY**: Monitor Repositories new architecture - Web/DB split needs performance validation
+3. **CRITICAL**: Parser database connection pool - 1.26M+ failures still occurring  
+4. **HIGH PRIORITY**: Timeline query optimization - 8,110 timeouts on over-provisioned Very Large server
 5. **HIGH PRIORITY**: Archives error rate reduction - 8.61% error rate affecting API functionality
 6. **MEDIUM PRIORITY**: Ruby Redis connectivity - blocking background processing for Ruby ecosystem
 7. **INVESTIGATION**: SBOM service activity - zero traffic detected, verify service status
